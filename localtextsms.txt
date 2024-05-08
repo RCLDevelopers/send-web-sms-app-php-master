@@ -1,0 +1,190 @@
+<?php
+session_start();
+require_once 'class.user.php';
+$user_home = new USER();
+
+if(!$user_home->is_logged_in())
+{
+	$user_home->redirect('index.php');
+}
+
+$stmt = $user_home->runQuery("SELECT * FROM tbl_users WHERE userID=:uid");
+$stmt->execute(array(":uid"=>$_SESSION['userSession']));
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+
+
+error_reporting( ~E_NOTICE ); // avoid notice
+
+
+if(isset($_POST['mob']) && isset($_POST['msg']))
+{
+
+
+//$_POST['mobile'];
+
+// Account details
+	$apiKey = urlencode('LXxCXGlhCss-ISRcB1pbwQEDkLgbF8CccJ0d969n3S');
+	
+	// Message details
+	$numbers = array($_POST['mob']);
+	//$numbers = $_POST['mobile'];
+	$sender = urlencode('TXTLCL');
+	$message = rawurlencode($_POST['msg']);
+ 
+	$numbers = implode(',', $numbers);
+ 
+	// Prepare data for POST request
+	$data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+ 
+	// Send the POST request with cURL
+	$ch = curl_init('https://api.textlocal.in/send/');
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$response = curl_exec($ch);
+	//curl_close($ch);
+	
+	// Process your response here
+	//echo $response;
+
+	if($response == true)
+	{
+		$successMSG = "Message sent  Successfully";
+		header('refresh:3; home.php');
+	}
+	else{
+      $errMSG = "message not sent unknown error uccer..";
+      header('refresh:3; home.php');
+	}
+
+	curl_close($ch);
+}
+
+
+?>
+
+<!DOCTYPE html>
+<html class="no-js">
+    
+    <head>
+        <title><?php echo $row['userEmail']; ?></title>
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="assets/styles.css" rel="stylesheet" media="screen">
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">Member Home</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+                            <li class="dropdown">
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> 
+								<?php echo $row['userEmail']; ?> <i class="caret"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a tabindex="-1" href="logout.php">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="http://www.codingcage.com/">Coding Cage</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Tutorials <b class="caret"></b>
+
+                                </a>
+                                <ul class="dropdown-menu" id="menu1">
+                                    <li><a href="http://www.codingcage.com/search/label/PHP OOP">PHP OOP</a></li>
+                                    <li><a href="http://www.codingcage.com/search/label/PDO">PHP PDO</a></li>
+                                    <li><a href="http://www.codingcage.com/search/label/jQuery">jQuery</a></li>
+                                    <li><a href="http://www.codingcage.com/search/label/Bootstrap">Bootstrap</a></li>
+                                    <li><a href="http://www.codingcage.com/search/label/CRUD">CRUD</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="home.php">Home</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+		
+	
+<div class="container">
+<div class="row">
+<!-- begin LEFT COLUMN -->
+	<div class="col-sm-12">
+<?php
+if(isset($errMSG))
+{
+?>
+<div class="alert alert-danger">
+<span class="glyphicon glyphicon-info-sign"></span> <strong><?php echo $errMSG; ?></strong>
+</div>
+<?php
+}
+else if(isset($successMSG))
+{
+?>
+<div class="alert alert-success">
+<strong><span class="glyphicon glyphicon-info-sign"></span> <?php echo $successMSG; ?></strong>
+</div>
+<?php
+}
+?> 
+<hr>
+	<h4> Send Sms </h4>
+<hr>
+
+<form method="post" >
+<div class="form-group">
+<label >Mobile number</label>
+<input type="text" class="form-control" name="mob" value="">
+</div>
+
+<div class="form-group">
+<label >Message Body</label>
+<textarea type="text" class="form-control" name="msg" required="required"></textarea> 
+</div>
+
+<hr>
+<input  type="submit" class="btn btn-default "  value="Send">
+</form>
+</div>
+	
+
+</div></div>
+<!-- row end -->
+
+
+
+        
+        <!--/.fluid-container-->
+        <script src="bootstrap/js/jquery-1.9.1.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/scripts.js"></script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,34 @@
+[12-Mar-2018 00:25:11 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 42
+[12-Mar-2018 00:25:38 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 42
+[12-Mar-2018 00:25:40 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 42
+[12-Mar-2018 00:25:41 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 42
+[12-Mar-2018 00:25:41 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 42
+[12-Mar-2018 00:25:42 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 42
+[12-Mar-2018 00:25:42 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 42
+[12-Mar-2018 00:25:42 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 42
+[12-Mar-2018 00:25:42 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 42
+[12-Mar-2018 00:25:43 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 42
+[12-Mar-2018 00:25:43 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 42
+[12-Mar-2018 00:27:21 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 49
+[12-Mar-2018 00:27:38 America/New_York] PHP Parse error:  syntax error, unexpected 'http' (T_STRING) in /home/mywezvus/websms.mywebdeal.in/signup.php on line 49
+[12-Mar-2018 00:47:47 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home/mywezvus/websms.mywebdeal.in/profile.php on line 129
+[12-Mar-2018 00:49:49 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home/mywezvus/websms.mywebdeal.in/profile.php on line 129
+[12-Mar-2018 05:26:56 America/New_York] PHP Notice:  Undefined index: userSession in /home/mywezvus/websms.mywebdeal.in/home.php on line 11
+[12-Mar-2018 06:43:01 America/New_York] PHP Notice:  Undefined index: userSession in /home/mywezvus/websms.mywebdeal.in/home.php on line 11
+[12-Mar-2018 22:45:21 America/New_York] PHP Notice:  Undefined index: userSession in /home/mywezvus/websms.mywebdeal.in/home.php on line 11
+[16-Apr-2018 07:11:00 America/New_York] PHP Notice:  Undefined index: userSession in /home/mywezvus/websms.mywebdeal.in/home.php on line 11
+[25-Jun-2018 05:11:07 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/home.php on line 135
+[25-Jun-2018 05:15:25 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/home.php on line 135
+[25-Jun-2018 05:16:33 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/home.php on line 135
+[25-Jun-2018 05:18:26 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/home.php on line 135
+[11-Jul-2018 02:16:59 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/home.php on line 135
+[11-Jul-2018 02:17:06 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/home.php on line 135
+[11-Jul-2018 02:17:27 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/profile.php on line 118
+[11-Jul-2018 02:17:32 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/profile.php on line 118
+[11-Jul-2018 05:13:44 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/home.php on line 135
+[11-Jul-2018 05:13:48 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/profile.php on line 118
+[11-Jul-2018 05:13:58 America/New_York] PHP Warning:  Use of undefined constant userID - assumed 'userID' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/profile.php on line 26
+[11-Jul-2018 05:13:58 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/profile.php on line 118
+[11-Jul-2018 05:14:00 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/home.php on line 135
+[11-Jul-2018 05:14:39 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/home.php on line 135
+[22-Jul-2018 04:09:52 America/New_York] PHP Warning:  Use of undefined constant userName - assumed 'userName' (this will throw an Error in a future version of PHP) in /home/mywezvus/websms.mywebdeal.in/home.php on line 135
